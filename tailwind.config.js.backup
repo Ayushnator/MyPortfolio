@@ -1,0 +1,55 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'field-green': '#2E8B57',
+        'field-green-dark': '#1a5d3a',
+        'accent-green': '#32CD32',
+        'navy': '#1e3a8a',
+        'gold': '#FFD700',
+        'gold-light': '#FFE55C',
+        'team-red': '#DC143C',
+        'field-lines': '#FFFFFF',
+        'glass-bg': 'rgba(255, 255, 255, 0.08)',
+        'glass-border': 'rgba(255, 255, 255, 0.15)',
+      },
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
+      },
+      animation: {
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'float': 'float 3s ease-in-out infinite',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'fade-in': 'fadeIn 0.8s ease-out',
+      },
+      keyframes: {
+        glow: {
+          '0%': { boxShadow: '0 0 20px rgba(0, 212, 255, 0.3)' },
+          '100%': { boxShadow: '0 0 30px rgba(0, 212, 255, 0.6)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(30px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      backdropBlur: {
+        'xs': '2px',
+      },
+    },
+  },
+  plugins: [],
+}
